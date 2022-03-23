@@ -118,11 +118,11 @@ nav a:focus {
 }
 
 @media (max-width: 640px) {
-  .container {
+  .container-nav {
     text-align: center;
   }
 
-  .container-nav {
+  .container-nav-1 {
     flex-direction: column;
     text-align: center;
   }
@@ -537,7 +537,6 @@ nav a:focus {
   .numbertext {
     font-size: 20px;
     color: #f2f2f2;
-    font-size: 22px;
     padding: 12px 12px;
     position: absolute;
     top: 0;
