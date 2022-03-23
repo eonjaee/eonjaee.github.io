@@ -1,60 +1,48 @@
-// buttons
-var sliderControl = document.querySelector(".slider-control");
-// slides informations
-var slides = document.querySelectorAll(".slide"),
-    slidesLength = slides.length;
-// slides array
-var slidesArr = [].slice.call(slides);
-// reverse array sorting
-slidesArr = slidesArr.reverse();
-// slide current
-var slideCurrent = 0;
-sliderControl.addEventListener("click", function (e) {
-    target = e.target;
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    // get next button
-    if (target.classList.contains("next")) {
-        next = e.target,
-            prev = next.previousElementSibling,
-            nextSlide = slidesArr[slideCurrent + 1],
-            slide = slidesArr[slideCurrent];
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-        slide.classList.add("slide-on");
-        slide.classList.remove("text-on");
-        nextSlide.classList.add("text-on");
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-        slideCurrent += 1;
-
-        if (slideCurrent > 0) {
-            prev.classList.remove("disabled");
-        }
-
-        if (slideCurrent === slidesLength - 1) {
-            next.classList.add("disabled");
-        }
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-
-    // get prev button
-    if (target.classList.contains("prev")) {
-
-        slideCurrent -= 1;
-
-        prev = e.target,
-            next = prev.nextElementSibling,
-            prevSlide = slidesArr[slideCurrent + 1],
-            slide = slidesArr[slideCurrent];
-
-        prevSlide.classList.remove("text-on");
-        slide.classList.remove("slide-on");
-        slide.classList.add("text-on");
-
-        if (slideCurrent === slidesLength - 2) {
-            next.classList.remove("disabled");
-        }
-        if (slideCurrent === 0) {
-            prev.classList.add("disabled");
-        }
-
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-});
-balapaCop("Image Slider", "#999");
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+
+
+
+
+
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+
+
+
