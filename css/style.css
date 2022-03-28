@@ -136,12 +136,12 @@ nav ul {
 }
 
 nav li {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 nav a {
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
 }
 
 nav a:hover,
@@ -200,6 +200,10 @@ nav a:focus{
 
   .list-head {
     text-align: center;
+  }
+
+  .list-main .grid > *:nth-child(2) {
+    border: 0 solid !important;
   }
 
 }
@@ -371,6 +375,7 @@ nav a:focus{
   display: block;
   margin: auto;
   transition: border 300ms linear;
+  transition: transform 0.2s ease-in;
   animation: fadein 1s;
 }
 
@@ -380,6 +385,8 @@ nav a:focus{
 
 .listing-box:hover {
   border: 1px solid rgb(255, 255, 255, 1);
+  background-color: rgb(255, 255, 255, 0.2);
+  transform: translateY(-10px);
 }
 
 .listing-box .showcase-nft {
@@ -437,6 +444,55 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
   color: var(--secondary-color);
 }
+
+.mint {
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: 0 10px 15px 3px rgba(0,0,0,.15), 0 5px 20px 3px rgba(0,0,0,.1);
+}
+
+input[type='text'] {
+border: 0;
+border-bottom: 1px solid #b4becb;
+width: 100%;
+padding: 3px;
+font-size: 16px;
+}
+
+.form {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+/* .showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+} */
 
 /* Definition section */
 .definition {
@@ -532,6 +588,7 @@ input[type=number]::-webkit-inner-spin-button {
 .grid-5 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: start;
+  padding-top: 20px;
 }
 
 .list-head .grid-4 {
@@ -737,13 +794,13 @@ input[type=number]::-webkit-inner-spin-button {
     transition: background-color 150ms linear;
 }
 
-.btn-one {
+.btn-one, input[type=file]::file-selector-button {
     background: var(--font-color);
     color: var(--primary-color);
     border: none;
 }
 
-.btn-one:hover {
+.btn-one:hover, input[type=file]::file-selector-button:hover {
     background-color: var(--font-color);
     opacity: 0.95;
     color: var(--primary-color);
@@ -1038,13 +1095,13 @@ form {
 	text-align: center;
 }
 
-input {
+/* input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 70%;
-}
+} */
 
 .loginbox {
 	background-color: var(--primary-color);
