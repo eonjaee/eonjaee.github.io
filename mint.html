@@ -46,9 +46,9 @@
             </div>
             <nav>
                 <ul>
-                    <li class="active-tab"><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="/list.html">List an NFT</a></li>
-                    <li><a href="/mint.html">Mint an NFT</a></li>
+                    <li class="active-tab"><a href="/mint.html">Mint an NFT</a></li>
                     <li><a href="#rankings">Rankings</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact Us</a></li>
@@ -114,164 +114,62 @@
 
 
         <!-- Showcase -->
-        <section class="showcase list">
+        <section class="showcase">
             <div class="container grid">
                 <div class="showcase-text">
                     <h1>
-                        <div class="lg">List an NFT</div>
+                        <div class="lg">Mint an NFT</div>
                     </h1>
-                    <p>List your NFTs on our platform at zero cost! We provide a secure, hassle-free experience with
-                        zero
-                        royalties.
+                    <p>Mint your NFTs on our platform for free!
                     </p>
-                    <a href="/list.html" class="btn btn-one">Create A Listing</a>
-                    <a href="#explore" class="btn btn-two">Explore Listings</a>
-                    <span><a href="#definition">
+                    <h3><label for="fileUpload">Upload file</label></h3>
+                    <input type="file" id="fileUpload"><br>
+                    Max file size allowed: 100 MB<br><br>
+
+
+
+                    <a href="#mint2" class="btn btn-two">Next</a>
+                    <br>
+                    <span><a href=" /index.html#definition">
                             <div class="showcase-link"><i class="fas fa-info-circle"></i> What's an NFT?
                         </a></span>
+
                 </div>
             </div>
 
-            <div class="showcase-nft card">
-                <img src="https://lh3.googleusercontent.com/9o_m0Ka8UjluQ5b2bW7sX2Oy6W7J2pZk43owbJZW1gTvI1LSlZFa73WBi59reE4dQldn0tki8zaCe_xHfgoDCvrQsWdN1DunMgqU=w600"
-                    style="width:100%;">
-                <div class="container flex listing-font">
-                    <div class="container flex-1 bottom">
-                        <div>
-                            <h2><i class="fas fa-check-circle" style='color:green'></i>
-                                mfers
-                                <br>mfer #7751
-                            </h2>
-                        </div>
-                        <div>
-                            <h2>
-                                Top Offer<br>
-                                <i class=' fab fa-ethereum' style='color:#ec555c'></i> 2.58
-                            </h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="showcase-nft ">
+                <video class="mint" width="100%" loop autoplay muted>
+                    <source src="https://openseauserdata.com/files/101f363e69699876f83e155373917bf8.mp4"
+                        type="video/mp4">
+                </video>
+                <p>An NFT can be in the form of one of the following file types: JPG, PNG, GIF, SVG, MP4, WEBM, MP3,
+                    WAV, OGG,
+                    GLB, GLTF</p>
             </div>
 
 </div>
 </section>
 
-<!-- NFT definition -->
-<a id="definition"></a>
+<a id="mint2"></a>
 <section class="showcase definition">
-    <div class="container grid grid-1">
-
-        <div class="slideshow-container">
-
-
-            <div class="mySlides fade">
-                <div class="numbertext">GIGACHAD #95/100
-                    <div class="numbertext-1">beeple</div>
-                </div>
-                <video width="100%" loop autoplay muted>
-                    <source src="https://openseauserdata.com/files/17fedf2e7d3d37050a7c8673e1028164.mp4"
-                        type="video/mp4">
-                </video>
-                <!-- <div class="text">owned by beeple</div> -->
+    <div class="container grid">
+        <form class="form">
+            <div class="form-control">
+                <input type="text" name="name" placeholder="Collection Name" required>
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">BULL RUN #88/271<div class="numbertext-1">beeple</div>
-                </div>
-                <!-- <div class="numbertext-1">beeple</div> -->
-                <video width="100%" loop autoplay muted>
-                    <source src="https://openseauserdata.com/files/9706007b462e8073c0a9771d9c795f9b.mp4"
-                        type="video/mp4">
-                </video>
-                <!-- <div class="text">owned by beeple</div> -->
+            <div class="form-control">
+                <input type="text" name="company" placeholder="Supply (in integer)" required>
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">INTO THE ETHER #82/207<div class="numbertext-1">beeple</div>
-                </div>
-                <!-- <div class="numbertext-1">beeple</div> -->
-                <video width="100%" loop autoplay muted>
-                    <source src="https://openseauserdata.com/files/5eefb33fb7de1fe3438878279abbf740.mp4"
-                        type="video/mp4">
-                </video>
-                <!-- <div class="text">owned by beeple</div> -->
+            <div class="form-control">
+                <input type="text" name="email" placeholder="Blockchain" required>
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">30K #1/1<div class="numbertext-1">beeple</div>
-                </div>
-                <!-- <div class="numbertext-1">beeple</div> -->
-                <video width="100%" height="100%" loop autoplay muted>
-                    <source src="https://openseauserdata.com/files/d12e92f87370b4ef30f3d333ba8cdc51.mp4"
-                        type="video/mp4">
-                </video>
-                <!-- <div class="text">owned by beeple</div> -->
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <!-- 
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span> -->
-
-        </div>
-
-
-        <div class="showcase-text">
-            <h1>
-                <div class="lg">What is an NFT?</div>
-            </h1>
-            <p>A <strong>non-fungible token</strong> is a non-interchangeable unit of data stored on a
-                blockchain, a
-                form of
-                digital
-                ledger, that can be sold and traded.</p>
-            <p>Types of NFT data units may be associated with digital
-                files
-                such
-                as photos, videos, and audio.</p>
-        </div>
-    </div>
+        </form>
+        <br>
+        <a href="#" class="btn btn-one" onclick="tbc1()">Upload</a>
     </div>
 </section>
 
-<!-- Browse by Categories -->
-<a id="explore"></a>
-<section class="showcase browse">
-    <br><br>
-    <center>
-        <h1>Browse NFTs by Category</h1>
-    </center>
-    <div class="container grid grid-3">
-        <div class="browse-nft">
-            <a href="#nft"><img src="/art.png">Art</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/collectibles.png">Collectibles</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/domain.png">Domains</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/music.png">Music</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/photography.png">Photography</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/sports.png">Sports</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/tradingcards.png">Trading Cards</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/utility.png">Utility</img></a>
-        </div>
-        <div class="browse-nft">
-            <a href="#nft"><img src="/virtualworlds.png">Virtual Worlds</img></a>
-        </div>
-    </div>
-</section>
+
 <!---JS CDN Link---->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!---Custom CDN Link---->
