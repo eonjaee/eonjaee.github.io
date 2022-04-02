@@ -1,5 +1,47 @@
+// go to top variable
+const goTopBtn = document.querySelector("[data-go-top]");
 
+window.addEventListener("scroll", function () {
 
+  if (this.window.scrollY >= 800) {
+    goTopBtn.classList.add("active");
+  } else {
+    goTopBtn.classList.remove("active");
+  }
+
+});
+
+try {
+  let slider = tns({
+    container: ".my-slider",
+    "slideBy": "1",
+    "speed": 400,
+    "nav": false,
+    autoplay: true,
+    controls: false,
+    autoplayButtonOutput: false,
+    responsive: {
+      1600: {
+        items: 4,
+        gutter: 20
+      },
+      1024: {
+        items: 3,
+        gutter: 20
+      },
+      768: {
+        items: 2,
+        gutter: 20,
+      },
+      480: {
+        items: 1,
+        gutter: 20
+      }
+    }
+  })
+} catch (e) {
+
+}
 //
 // Login/Register box
 //
@@ -166,179 +208,4 @@ actualBtn.addEventListener('change', function () {
 
 
 
-
-const previousButton = document.getElementById("previous")
-const nextButton = document.getElementById("next")
-const submitButton = document.getElementById('validate')
-const form = document.getElementById('stepByStepForm')
-const dots = document.getElementsByClassName('progress-bar__dot')
-const numberOfSteps = 3
-let currentStep = 1
-
-for (let i = 0; i < dots.length; ++i) {
-  dots[i].addEventListener('click', () => {
-    goToStep(i + 1)
-  })
-}
-
-previousButton.onclick = goPrevious
-nextButton.onclick = goNext
-
-
-function goNext(e) {
-  e.preventDefault()
-  currentStep += 1
-  goToStep(currentStep)
-}
-
-function goPrevious(e) {
-  e.preventDefault()
-  currentStep -= 1
-  goToStep(currentStep)
-}
-
-function goToStep(stepNumber) {
-  currentStep = stepNumber
-
-  let inputsToHide = document.getElementsByClassName('step')
-  let inputs = document.getElementsByClassName(`step${currentStep}`)
-  let indicators = document.getElementsByClassName('progress-bar__dot')
-
-  for (let i = indicators.length - 1; i >= currentStep; --i) {
-    indicators[i].classList.remove('full')
-  }
-
-  for (let i = 0; i < currentStep; ++i) {
-    indicators[i].classList.add('full')
-  }
-
-  //hide all input
-  for (let i = 0; i < inputsToHide.length; ++i) {
-    hide(inputsToHide[i])
-  }
-
-  //only show the right one
-  for (let i = 0; i < inputs.length; ++i) {
-    show(inputs[i])
-  }
-
-  //if we reached final step
-  if (currentStep === numberOfSteps) {
-    enable(previousButton)
-    disable(nextButton)
-    show(submitButton)
-  }
-
-  //else if first step
-  else if (currentStep === 1) {
-    disable(previousButton)
-    enable(next)
-    hide(submitButton)
-  }
-
-  else {
-    enable(previousButton)
-    enable(next)
-    hide(submitButton)
-  }
-}
-
-function enable(elem) {
-  elem.classList.remove("disabled");
-  elem.disabled = false;
-}
-
-function disable(elem) {
-  elem.classList.add("disabled");
-  elem.disabled = true;
-}
-
-function show(elem) {
-  elem.classList.remove('hidden')
-}
-
-function hide(elem) {
-  elem.classList.add('hidden')
-}
-//jQuery time
-var current_fs, next_fs, previous_fs; //fieldsets
-var left, opacity, scale; //fieldset properties which we will animate
-var animating; //flag to prevent quick multi-click glitches
-
-$(".next").click(function () {
-  if (animating) return false;
-  animating = true;
-
-  current_fs = $(this).parent();
-  next_fs = $(this).parent().next();
-
-  //activate next step on progressbar using the index of next_fs
-  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-  //show the next fieldset
-  next_fs.show();
-  //hide the current fieldset with style
-  current_fs.animate({ opacity: 0 }, {
-    step: function (now, mx) {
-      //as the opacity of current_fs reduces to 0 - stored in "now"
-      //1. scale current_fs down to 80%
-      scale = 1 - (1 - now) * 0.2;
-      //2. bring next_fs from the right(50%)
-      left = (now * 50) + "%";
-      //3. increase opacity of next_fs to 1 as it moves in
-      opacity = 1 - now;
-      current_fs.css({
-        'transform': 'scale(' + scale + ')',
-        'position': 'absolute'
-      });
-      next_fs.css({ 'left': left, 'opacity': opacity });
-    },
-    duration: 800,
-    complete: function () {
-      current_fs.hide();
-      animating = false;
-    },
-    //this comes from the custom easing plugin
-    easing: 'easeInOutBack'
-  });
-});
-
-$(".previous").click(function () {
-  if (animating) return false;
-  animating = true;
-
-  current_fs = $(this).parent();
-  previous_fs = $(this).parent().prev();
-
-  //de-activate current step on progressbar
-  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-  //show the previous fieldset
-  previous_fs.show();
-  //hide the current fieldset with style
-  current_fs.animate({ opacity: 0 }, {
-    step: function (now, mx) {
-      //as the opacity of current_fs reduces to 0 - stored in "now"
-      //1. scale previous_fs from 80% to 100%
-      scale = 0.8 + (1 - now) * 0.2;
-      //2. take current_fs to the right(50%) - from 0%
-      left = ((1 - now) * 50) + "%";
-      //3. increase opacity of previous_fs to 1 as it moves in
-      opacity = 1 - now;
-      current_fs.css({ 'left': left });
-      previous_fs.css({ 'transform': 'scale(' + scale + ')', 'opacity': opacity });
-    },
-    duration: 800,
-    complete: function () {
-      current_fs.hide();
-      animating = false;
-    },
-    //this comes from the custom easing plugin
-    easing: 'easeInOutBack'
-  });
-});
-
-$(".submit").click(function () {
-  return false;
-})
 

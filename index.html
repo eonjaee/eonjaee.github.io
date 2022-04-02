@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +50,7 @@
                     <li class="active-tab"><a href="/index.html">Home</a></li>
                     <li><a href="/list.html">List an NFT</a></li>
                     <li><a href="/mint.html">Mint an NFT</a></li>
-                    <li><a href="#rankings">Rankings</a></li>
+                    <li><a href="/rankings.html">Rankings</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                     <li id="login"><a href="#">Log In/Register</a></li>
@@ -235,12 +236,133 @@
     </div>
 </section>
 
+
+<section class="showcase new-listings">
+    <br>
+    <center>
+        <h1>Newest Listings</h1>
+    </center><br>
+    <div class="slider">
+        <div class="container">
+            <div class="my-slider">
+                <div>
+                    <div class="slide">
+                        <div class="slide-img img-1">
+                            <a href="#">Buy Now</a>
+                        </div>
+                        <div>
+                            <h3>Bored Ape Yacht Club #4671</h3>
+                            <div class="new-listing-metadata">
+                                <div>Owned by:<br>
+                                    user1234</div>
+                                <div>Price:<br>
+                                    123 <i class=' fab fa-ethereum' style='color:#ec555c'></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide">
+                        <div class="slide-img img-2">
+                            <a href="#">Buy Now</a>
+                        </div>
+                        <div>
+                            <h3>Bored Ape Yacht Club #532</h3>
+                            <div class="new-listing-metadata">
+                                <div>Owned by:<br>
+                                    user1234</div>
+                                <div>Price:<br>
+                                    123 <i class=' fab fa-ethereum' style='color:#ec555c'></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide">
+                        <div class="slide-img img-3">
+                            <a href="#">Buy Now</a>
+                        </div>
+                        <div>
+                            <h3>Bored Ape Yacht Club #4605</h3>
+                            <div class="new-listing-metadata">
+                                <div>Owned by:<br>
+                                    user1234</div>
+                                <div>Price:<br>
+                                    123 <i class=' fab fa-ethereum' style='color:#ec555c'></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide">
+                        <div class="slide-img img-4">
+                            <a href="#">Buy Now</a>
+                        </div>
+                        <div>
+                            <h3>Bored Ape Yacht Club #5526</h3>
+                            <div class="new-listing-metadata">
+                                <div>Owned by:<br>
+                                    user1234</div>
+                                <div>Price:<br>
+                                    123 <i class=' fab fa-ethereum' style='color:#ec555c'></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide">
+                        <div class="slide-img img-5">
+                            <a href="#">Buy Now</a>
+                        </div>
+                        <div>
+                            <h3>Bored Ape Yacht Club #4083</h3>
+                            <div class="new-listing-metadata">
+                                <div>Owned by:<br>
+                                    user1234</div>
+                                <div>Price:<br>
+                                    123 <i class=' fab fa-ethereum' style='color:#ec555c'></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide">
+                        <div class="slide-img img-6">
+                            <a href="#">Buy Now</a>
+                        </div>
+                        <div>
+                            <h3>Bored Ape Yacht Club #2843</h3>
+                            <div class="new-listing-metadata">
+                                <div>Owned by:<br>
+                                    user1234</div>
+                                <div>Price:<br>
+                                    123 <i class=' fab fa-ethereum' style='color:#ec555c'></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+</section>
+
 <!-- Browse by Categories -->
 <a id="explore"></a>
 <section class="showcase browse">
     <br><br>
     <center>
-        <h1>Browse NFTs by Category</h1>
+        <h1>Browse NFTs by Category</h1><br>
     </center>
     <div class="container grid grid-3">
         <div class="browse-nft">
@@ -267,15 +389,22 @@
         <div class="browse-nft">
             <a href="#nft"><img src="/utility.png">Utility</img></a>
         </div>
-        <div class="browse-nft">
+        <!-- <div class="browse-nft">
             <a href="#nft"><img src="/virtualworlds.png">Virtual Worlds</img></a>
-        </div>
+        </div> -->
+        <br><br>
     </div>
 </section>
+<a href="#top" class="go-top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+</a>
 <!---JS CDN Link---->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!---Custom CDN Link---->
 <script src="js.js"></script>
+<!--- ionicon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 <!-- Footer -->
 <div class="footer">
