@@ -17,8 +17,10 @@ try {
     "slideBy": "1",
     "speed": 400,
     "nav": false,
+    arrowKeys: true,
     autoplay: true,
-    controls: false,
+    controls: true,
+    controlsPosition: "bottom",
     autoplayButtonOutput: false,
     responsive: {
       1600: {
