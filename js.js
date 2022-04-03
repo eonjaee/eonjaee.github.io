@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 // go to top variable
 const goTopBtn = document.querySelector("[data-go-top]");
 
